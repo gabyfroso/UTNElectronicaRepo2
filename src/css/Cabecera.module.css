@@ -1,0 +1,149 @@
+header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    top: 0;
+    padding-top: 2vh;
+
+    width: 100%;
+    height: 6em;
+
+    z-index: 10;
+}
+/*pc*/
+@media only screen and (min-width: 667px){
+    header li *{
+        font-size: 1rem;
+    }
+}
+
+header>button{
+    flex-grow: .2;
+    border-radius: 1em;
+
+    height: 8vh;
+    width: 8vh;
+}
+header>button>svg{
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/*
+IconUTN y Login
+*/
+
+.principal{
+    display: flex;
+    align-items: center;
+    flex-grow: 3.4;
+}
+.principal>button, .principal>a{
+    position: absolute;
+}
+
+.logo{
+    display: flex;
+
+    left: 1vh;
+    
+    width: 14em;
+    height: 4em;
+    
+    object-fit: fill;
+}
+.logo>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#login{
+    right: 2vh;
+    margin: auto;
+}
+#login[fc='false']{
+    width: 0%;
+    overflow: hidden;
+}
+#login[fc='true']{
+    width: 8vh;
+}
+
+/*
+Cabecera - Links
+*/
+
+.links{
+    width: 100%;
+    min-width: 370px;
+}
+.links>ul{
+    display: flex;
+    flex-wrap: nowrap;
+    
+    top: 1em;
+    
+    width: 100%;
+    height: 10vh;
+    
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    z-index: 9;
+}
+.links>ul>li{
+    flex-grow: 1;
+}
+.links>ul>li>button{
+    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.links>ul>li>button:hover{
+    cursor: pointer;
+    letter-spacing: 0.20em;
+}
+
+/*pc*/
+@media only screen and (min-width: 850px){
+    .links>ul{
+        height: auto;
+    }
+    .links>ul>li>button{
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+}
+
+
+
+/*
+FILTER
+sirve para poner oscuro el resto y al presionarse de cualquier forma, cerrar todo
+*/
+
+button#filter{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+}
+button#filter[vs='false']{
+    opacity: 0;
+
+    z-index: -1;
+}
+
+button#filter[vs='true']{
+    opacity: .4;
+
+    z-index: 2;
+}

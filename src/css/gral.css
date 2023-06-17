@@ -1,0 +1,39 @@
+*{
+    position: relative;
+    
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+main{
+    margin-top: 20vh;
+
+    padding-top: 4vh;
+    padding-bottom: 12vh;
+
+    margin-left: .5vh;
+    margin-right: .5vh;
+    margin-bottom: 10vh;
+}
+
+footer{
+    bottom: 0;
+}
+
+div#SiteCont{
+    min-height: 100%;
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+ul{
+    list-style: none;
+}

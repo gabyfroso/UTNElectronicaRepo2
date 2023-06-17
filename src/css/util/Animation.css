@@ -1,0 +1,65 @@
+div#SiteCont[simple='false'] nav#UserMenu{
+    transition: 1.4s all;
+}
+
+div#SiteCont[simple='false']:last-child>aside>fieldset{
+    transition: .8s all;
+}
+
+div#SiteCont[simple='false']:last-child>aside>fieldset[fc='false']{
+    transition: .4s all;
+}
+
+div#SiteCont[simple='false'] aside,
+div#SiteCont[simple='false'] aside *,
+div#SiteCont[simple='false'] header,
+div#SiteCont[simple='false'] header *{
+    transition: .4s all ease-in;
+}
+
+div#SiteCont[simple='false']>aside li>button:hover,
+div#SiteCont[simple='false']>header li>button:hover{
+    text-shadow: 1px 0 5px;
+}
+
+
+div#SiteCont[simple='false']>aside li>button::before,
+div#SiteCont[simple='false']>header li>button::before,
+div#SiteCont[simple='false']>header li>a::before{
+    content: '';
+    position: absolute;
+    bottom: .4em;
+    left: 80%;
+    width: 14px;
+    height: 6px;
+    transition: 2s;
+    transform: translateX(-50%) skew(325deg);
+}
+
+
+div#SiteCont[simple='false']>aside li>button:hover::before,
+div#SiteCont[simple='false']>header li>button:hover::before,
+div#SiteCont[simple='false']>header li>a:hover::before{
+    width: 20px;
+    left: 20%;
+}
+
+div#SiteCont[simple='false']>aside li>button::after,
+div#SiteCont[simple='false']>header li>button::after,
+div#SiteCont[simple='false']>header li>a::after{
+    content: '';
+    position: absolute;
+    top: .4em;
+    left: 20%;
+    width: 14px;
+    height: 6px;
+    transition: 2s;
+    transform: translateX(-50%) skew(325deg);
+}
+
+div#SiteCont[simple='false']>aside li>button:hover::after,
+div#SiteCont[simple='false']>header li>button:hover::after,
+div#SiteCont[simple='false']>header li>a:hover::after{
+    width: 20px;
+    left: 80%;
+}

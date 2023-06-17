@@ -1,0 +1,279 @@
+section.c{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*
+
+**
+
+*****
+
+**
+
+Formularios
+
+**
+
+*****
+
+**
+
+*/
+form.f{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+form.classic--1 *{
+    width: 100%;
+}
+form.classic--1 input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid blue;
+    width: 70em;
+}
+
+/*
+
+**
+
+***** 
+
+**
+
+                Expansibles
+
+Eje:
+
+ > Biblioteca .expansible
+    -x        .tb1
+        -y    .tb2
+
+**
+
+*****
+
+**
+*/
+
+button.expansible{
+    display: flex;
+
+    width: 100%;
+
+    flex-direction: row;
+    justify-items: center;
+}
+button.expansible *{
+    display: flex;
+}
+button.expansible box-icon{
+    width: 3.4rem;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+
+    transition: .4s all;
+}
+button.expansible box-icon[fc='false']{
+    transform: rotate(0);
+}
+button.expansible box-icon[fc='true']{
+    transform: rotate(90deg);
+}
+
+ul.expansible{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+ul.expansible[fc="false"] *{
+    height: 0%;
+}
+ul.expansible[fc="true"]{
+    height: auto;
+}
+
+li.tb1{
+    padding-left: 10vh;
+}
+li.tb2{
+    padding-left: 20vh;
+}
+li.tb3{
+    padding-left: 30vh;
+}
+li.tb4{
+    padding-left: 40vh;
+}
+
+
+/*
+
+**
+
+*****
+
+**
+
+CARDS
+
+**
+
+*****
+
+**
+
+*/
+
+ul.cards{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+ul.cards *{
+    padding: .1em;
+}
+
+ul.cards>li{
+    width: 45%;
+    max-width: 95%;
+    border-radius: .4em;
+    padding: 0;
+    min-width: 550px;
+}
+
+ul.cards>li>button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    cursor: pointer;
+}
+
+ul.cards>li>button>img{
+    height: 36vh;
+}
+
+/*pc-chica*/
+@media only screen and (max-width: 1254px){
+    ul.cards{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    ul.cards>li{
+        width: 100%;
+    }
+}
+
+ul.Scard{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+ul.Scard>li.i{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap-reverse;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    max-width: 90%;
+}
+ul.Scard>li.i>img{
+    width: 30%;
+}
+
+ul.Scard>li.i>div{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vh;
+    min-width: 30vh;
+    padding: 2vh;
+}
+
+
+/*
+
+**
+
+*****
+
+**
+
+XCONTROL DE IMAGENES
+
+**
+
+*****
+
+**
+
+*/
+
+.util{
+    position: absolute;
+
+    width: 8vh;
+    height: 8vh;
+    z-index: 3;
+}
+
+button.util{
+    border-radius: 30%;
+    border-bottom: 2px solid black;
+
+    opacity: .2;
+    z-index: 4;
+}
+div.fximg>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+img.co{
+    object-fit: cover;
+}
+img.fi{
+    object-fit:fill;
+}
+img.sd{
+    object-fit:scale-down;
+}
+
+div.fximg{
+    display: flex;
+}
+
+div.l1{
+    height: 14em;
+}
+div.l2{
+    height: 12em;
+}
+div.l3{
+    height: 10em;
+}
+div.l4{
+    height: 8em;
+}

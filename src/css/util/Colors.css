@@ -1,0 +1,256 @@
+:root{
+    --header-dark: rgb(23, 52, 167);
+    --Aside-dark: rgb(12, 36, 133);
+    --Aside-dark-text: rgb(187, 187, 187);
+    
+    --main-dark: rgb(44, 44, 47);
+    --text-dark: rgb(186, 157, 239);
+
+    --card-outline-dark: rgb(0, 52, 155);
+    --card-bg-dark: rgb(10, 76, 207);
+
+    --background-dark: rgb(8, 0, 91);
+    --backgroundmain-dark: rgb(0, 30, 148);
+
+    --Access-dark: rgb(6, 190, 231);
+    --Access-dark-text: rgb(0, 0, 0);
+    
+    --Footer-dark: rgb(50, 84, 220);
+    /*
+    LIGHT
+    */
+    --header-light: rgb(6, 122, 223);
+    --Aside-light: rgb(0, 191, 255);
+    --Aside-light-text: rgb(255, 255, 255);
+
+    --main-light: rgb(0, 0, 0);
+    --text-light: rgb(0, 0, 0);
+    --card-outline-light: rgb(58, 147, 255);
+    --card-bg-light: rgb(96, 164, 247);
+    
+
+    --background-light: rgb(228, 233, 233);
+    --backgroundmain-light: rgb(228, 233, 233);
+
+    --Access-light: rgb(160, 215, 227);
+    --Access-light-text: rgb(0, 0, 0);
+    --Footer-light: rgb(69, 199, 255);
+    /*
+        DEFAULT
+    */
+
+    --header-Default: rgb(169, 168, 168);
+    --Aside-Default: rgb(169, 168, 168);
+    --Aside-Default-text: rgb(37, 33, 33);
+    
+    --main-Default: rgb(169, 168, 168);
+    --text-Default: rgb(169, 168, 168);
+
+
+    --background-Default: rgb(169, 168, 168);
+    --backgroundmain-Default: rgb(169, 168, 168);
+}
+
+header>nav *{
+    color: rgb(255, 111, 111);
+    text-decoration: none;
+}
+div#SiteCont[cor='Light'] nav#UserMenu>nav *{
+    color: rgb(255, 255, 255);
+}
+
+/*
+Mejoras visuales entre temas
+*/
+div#SiteCont[cor='Dark'] header>nav>button>img,
+div#SiteCont[cor='Dark']:last-child>aside>svg,
+div#SiteCont[cor='Dark'] header svg{
+    filter: invert();
+}
+
+/*
+DARK MODE
+*/
+
+div#SiteCont[cor='Dark'] header{
+    background-color: var(--header-dark);
+}
+div#SiteCont[cor='Dark'] header>nav>ul{
+    background-color: var(--Aside-dark);
+}
+
+div#SiteCont[cor='Dark']:first-child>aside{
+    background-color: var(--Aside-dark);
+}
+div#SiteCont[cor='Dark']>aside>nav>ul>li *{
+    color: var(--Aside-light-text);
+}
+
+
+div#SiteCont[cor='Dark']>header>nav>ul>li * {
+    color: var(--Aside-dark-text);
+}
+
+
+
+div#SiteCont[cor='Dark']:last-child>aside>fieldset{
+    background-color: var(--Access-dark);
+    border: 2px solid var(--Access-dark-text);
+}
+
+div#SiteCont[cor='Dark']{
+    background-color: var(--background-dark);
+}
+div#SiteCont[cor='Dark']>main{
+    background-color: var(--backgroundmain-dark);
+}
+div#SiteCont[cor='Dark']>main *{
+    color: var(--text-dark);
+}
+
+
+
+div#SiteCont[cor='Dark'] footer{
+    background-color: var(--Footer-dark);
+    color: var(--text-dark);
+}
+
+
+
+/*
+Light
+*/
+div#SiteCont[cor='Light'] svg.util{
+    fill: rgb(0, 200, 255);
+}
+
+div#SiteCont[cor='Light'] header{
+    background-color: var(--header-light);
+}
+div#SiteCont[cor='Light'] header>nav>ul{
+    background-color: var(--Aside-light);
+}
+
+
+/*Aside*/
+div#SiteCont[cor='Light']:first-child>aside{
+    background-color: var(--Aside-light);
+}
+
+div#SiteCont[cor='Light'] header>nav>ul>li *,
+div#SiteCont[cor='Light']:first-child>aside>nav>ul>li *{
+    color: var(--Aside-light-text);
+    text-decoration: none;
+}
+
+/*Aside 2 (Accesibility)*/
+div#SiteCont[cor='Light']:last-child>aside>fieldset{
+    background-color: var(--Access-light);
+    border: 2px solid var(--Access-light-text);
+}
+
+div#SiteCont[cor='Light']{
+    background-color: var(--background-light);
+}
+div#SiteCont[cor='Light']>main{
+    background-color: var(--backgroundmain-light);
+}
+div#SiteCont[cor='Light']>main *{
+    color: var(--text-light);
+}
+
+
+div#SiteCont[cor='Light'] footer{
+    background-color: var(--Footer-light);
+    color: var(--text-light);
+}
+
+/*
+DEFAULT
+en caso de fallar algún tema o no expecificarse, por alguna razón, irán los defaults
+*/
+
+div#SiteCont>aside>fieldset{
+    background-color: wheat;
+}
+
+div#SiteCont{
+    background-color: var(--background-Default);
+}
+div#SiteCont>main{
+    background-color: var(--backgroundmain-li--background-Default);
+    color: var(--text-li--background-Default);
+}
+
+
+div#SiteCont:first-child>aside{
+    background-color: var(--Aside-Default);
+}
+div#SiteCont:first-child>aside li>button{
+    color: var(--Aside-Default-text);
+    
+}
+
+/*
+EXTRAS
+
+Donde hay contenido de página especial como los cards
+
+*/
+
+/*
+Dark
+*/
+
+div#SiteCont[cor='Dark'] ul.cards>li,
+div#SiteCont[cor='Dark'] ul.Scard>li{
+    border: .4em ridge var(--card-outline-dark);
+    background-color: var(--card-bg-dark);
+}
+
+/*
+Light
+*/
+
+div#SiteCont[cor='Light'] ul.cards>li,
+div#SiteCont[cor='Light'] ul.Scard>li{
+    border: .4em ridge var(--card-outline-light);
+    background-color: var(--card-bg-light);
+}
+
+
+/*
+IN ANIMATIONS
+*/
+/*
+div#SiteCont[simple='false'][cor='Dark']>aside li>button,
+div#SiteCont[simple='false'][cor='Dark']>header li>a,
+div#SiteCont[simple='false'][cor='Dark']>header li>button{
+    outline: 5px solid wheat;
+}
+*/
+div#SiteCont[simple='false'][cor='Dark']>aside li>button::before,
+div#SiteCont[simple='false'][cor='Dark']>header li>button::before,
+div#SiteCont[simple='false'][cor='Dark']>header li>a::before,
+div#SiteCont[simple='false'][cor='Dark']>aside li>button::after,
+div#SiteCont[simple='false'][cor='Dark']>header li>button::after,
+div#SiteCont[simple='false'][cor='Dark']>header li>a::after{
+    background-color: white;
+}
+
+/*
+div#SiteCont[simple='false'][cor='Light']>aside li>button,
+div#SiteCont[simple='false'][cor='Light']>header li>button,
+div#SiteCont[simple='false'][cor='Light']>header li>a{
+    border: 5px solid rgb(255, 56, 56);
+    border-radius: .5vh;
+}
+*/
+div#SiteCont[simple='false'][cor='Light']>aside li>button::before,
+div#SiteCont[simple='false'][cor='Light']>header li>button::before,
+div#SiteCont[simple='false'][cor='Light']>header li>a::before,
+div#SiteCont[simple='false'][cor='Light']>aside li>button::after,
+div#SiteCont[simple='false'][cor='Light']>header li>button::after,
+div#SiteCont[simple='false'][cor='Light']>header li>a::after{
+    background-color: rgb(146, 241, 255);
+}
