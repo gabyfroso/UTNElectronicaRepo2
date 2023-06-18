@@ -22,21 +22,22 @@ import './css/util/Size.css';
 PAGES
 */
 import Inicio from './pages/Inicio.jsx';
-import Menu from './pages/menu';
 import Directivos from './pages/Directivos';
+import Menu from './pages/menu';
 
-import OfertasAcademicas from './pages/Ofertas-Academicas';
+//Contacto
+import Contacto from './pages/Contacto/contacto'
+import ContactoMenu from './pages/Contacto/Menu'
+import ContactoDpto from './pages/Contacto/Dpto';
+import ContactoReportes from './pages/Contacto/Reportes';
+
+//Media
 import Media from './pages/Media/Media';
-
-import Contacto from './pages/Contacto';
-import Reportes from './pages/Contacto-reportes';
-
-//TO MENU
-import {Biblioteca, EeBooks_Extras, EeBooks_Principales, GuideStudy_eFRT} from './pages/libs/Biblioteca';
-import {PracticeProfessionalSuperviced, JornadasAcadem} from './pages/libs/Academico';
-import {SubForoConsultas} from './pages/libs/Consultas';
-import {ProyectIyD, ProyectFinals} from './pages/libs/proyectos';
-import {PrivatedLibrery} from './pages/libs/Privated';
+import MediaMenu from './pages/Media/Menu';
+import MediaBiblioteca from './pages/Media/Biblioteca';
+import MediaProyectos from './pages/Media/Proyectos';
+import MediaPublicaciones from './pages/Media/Publicaciones';
+import MediaForo from './pages/Media/Foro';
 
 
 const ElementGral= ({Eunico})=>{
@@ -66,64 +67,82 @@ const route = createBrowserRouter([
     element: <ElementGral Eunico={Inicio} />
   },
   {
-    path: '/menu/',
-    element: <ElementGral Eunico={Menu}/>
+    path: '/Directivos',
+
+    element: <ElementGral Eunico={Directivos} />
   },
   {
-    path: '/directivos/',
-    element:<ElementGral Eunico={Directivos} />
+    path: '/Menu',
+
+    element: <ElementGral Eunico={Menu} />
+  },
+  /*
+
+  **
+
+    SECCION DE CONTACTO
+  
+  **
+
+  */
+  {
+    path: '/Contacto',
+
+    element: <ElementGral Eunico={Contacto} />
   },
   {
-    path: '/media/',
-    element:<ElementGral Eunico={Media} />
+    path: '/Contacto/Menu',
+
+    element: <ElementGral Eunico={ContactoMenu} />
   },
   {
-    path: '/media/Biblioteca',
-    element:<ElementGral Eunico={Biblioteca} />
+    path: '/Contacto/Dpto',
+
+    element: <ElementGral Eunico={ContactoDpto} />
   },
   {
-    path: '/Consultas/SubForoConsultas/',
-    element:<ElementGral Eunico={SubForoConsultas} />
+    path: '/Contacto/Reportes',
+
+    element: <ElementGral Eunico={ContactoReportes} />
+  },
+  /*
+
+  **
+
+    SECCION DE MEDIA
+  
+  **
+
+  */
+  {
+    path: '/Media',
+
+    element: <ElementGral Eunico={Media} />
   },
   {
-    path: '/contacto/',
-    element:<ElementGral Eunico={Contacto} />
+    path: '/Media/Menu',
+
+    element: <ElementGral Eunico={MediaMenu} />
   },
   {
-    path: '/contacto/reportes',
-    element:<ElementGral Eunico={Reportes} />
+    path: '/Media/Biblioteca',
+
+    element: <ElementGral Eunico={MediaBiblioteca} />
   },
   {
-    path: '/Academico/JornadasAcadem/',
-    element:<ElementGral Eunico={JornadasAcadem} />
+    path: '/Media/Proyectos',
+
+    element: <ElementGral Eunico={MediaProyectos} />
   },
   {
-    path: '/Academico/PracticeProfessionalSuperviced/',
-    element:<ElementGral Eunico={PracticeProfessionalSuperviced} />
+    path: '/Media/Publicaciones',
+
+    element: <ElementGral Eunico={MediaPublicaciones} />
   },
   {
-    path: '/Academico/ProyectIyD/',
-    element:<ElementGral Eunico={ProyectIyD} />
-  },
-  {
-    path: '/Academico/ProyectFinals/',
-    element:<ElementGral Eunico={ProyectFinals} />
-  },
-  {
-    path: '/libs/EeBooks_Extras/',
-    element:<ElementGral Eunico={EeBooks_Extras} />
-  },
-  {
-    path: '/libs/EeBooks_Principales/',
-    element:<ElementGral Eunico={EeBooks_Principales} />
-  },
-  {
-    path: '/media/PrivatedLibrery/',
-    element:<ElementGral Eunico={PrivatedLibrery} />
-  },
-  {
-    path: '/libs/GuideStudy_eFRT/',
-    element:<ElementGral Eunico={GuideStudy_eFRT} />
+    path: '/Media/Foro',
+
+    element: <ElementGral Eunico={MediaForo} />
   }
 ])
 

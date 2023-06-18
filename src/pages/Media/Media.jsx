@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
-export default ()=>{
-    
+import Expansible from '../expansibles.js';
+
+export default () => {
+
     return (
         <>
-            <h1>Sección de Media</h1>
+            <h1>Sección de Biblioteca</h1>
         </>
     )
 }
