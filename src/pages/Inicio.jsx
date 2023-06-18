@@ -1,9 +1,9 @@
 import React from 'react';
-import {icons, page1} from '../controlsimg';
+import { icons, page1 } from '../controlsimg';
 
-function Lref (ref=''){
-    if(window.location.pathname !== '/' + ref){
-        window.location.pathname= '/'+ref;
+function Lref(ref = '') {
+    if (window.location.pathname !== '/' + ref) {
+        window.location.pathname = '/' + ref;
     }
 }
 
@@ -23,78 +23,98 @@ export default () => {
                         <li>
                             <button onClick={() => Lref('/media/Biblioteca')}>
                                 <img src={page1.i1} alt='Biblioteca de Consultas' />
-                                <h1>Biblioteca de consultas</h1>
+                                <div>
+                                    <h1>Biblioteca de consultas</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button onClick={() => Lref('/media/')}>
-                                <img src={page1.i2}  alt='E-books Dpto. Electrónica FRT' />
-                                <h1>E-books Dpto. Electrónica FRT</h1>
+                                <img src={page1.i2} alt='E-books Dpto. Electrónica FRT' />
+                                <div>
+                                    <h1>E-books Dpto. Electrónica FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button onClick={() => Lref('/Academico/JornadasAcadem/')}>
-                                <img src={page1.i3}  alt='Jornadas Académicas y Científicas
+                                <img src={page1.i3} alt='Jornadas Académicas y Científicas
                                 Dpto. Electrónica - FRT' />
-                                <h1>Jornadas Académicas y Científicas
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Jornadas Académicas y Científicas
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i4}  alt='Publicaciones Académicas y Científicas
+                                <img src={page1.i4} alt='Publicaciones Académicas y Científicas
                                 Dpto. Electrónica - FRT' />
-                                <h1>Publicaciones Académicas y Científicas
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Publicaciones Académicas y Científicas
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i5}  alt='Posgrados
+                                <img src={page1.i5} alt='Posgrados
                                 Dpto. Electrónica - FRT' />
-                                <h1>Posgrados
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Posgrados
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i6}  alt='Proyectos de Investigación y Desarrollo PID
+                                <img src={page1.i6} alt='Proyectos de Investigación y Desarrollo PID
                                 Dpto. Electrónica - FRT' />
-                                <h1>
-                                    Proyectos de Investigación y Desarrollo PID
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>
+                                        Proyectos de Investigación y Desarrollo PID
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i7}  alt='Práctica Profesional Supervisada PPS
+                                <img src={page1.i7} alt='Práctica Profesional Supervisada PPS
                                 Dpto. Electrónica - FRT' />
-                                <h1>Práctica Profesional Supervisada PPS
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Práctica Profesional Supervisada PPS
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={icons.ilutn}  alt='Proyectos de Fin de Carrera
+                                <img src={icons.ilutn} alt='Proyectos de Fin de Carrera
                                 Dpto. Electrónica - FRT' />
-                                <h1>Proyectos de Fin de Carrera
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Proyectos de Fin de Carrera
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i9}  alt='Convenios y Transferencias al Medio
+                                <img src={page1.i9} alt='Convenios y Transferencias al Medio
                                 Dpto. Electrónica - FRT' />
-                                <h1>Convenios y Transferencias al Medio
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Convenios y Transferencias al Medio
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                         <li>
                             <button>
-                                <img src={page1.i10}  alt='Guías de Estudios
+                                <img src={page1.i10} alt='Guías de Estudios
                                 Dpto. Electrónica - FRT' />
-                                <h1>Guías de Estudios
-                                    Dpto. Electrónica - FRT</h1>
+                                <div>
+                                    <h1>Guías de Estudios
+                                        Dpto. Electrónica - FRT</h1>
+                                </div>
                             </button>
                         </li>
                     </ul>
@@ -114,7 +134,7 @@ export default () => {
                 <h1>Enlaces a bibliotecas externas</h1>
                 <ul className='Scard'>
                     <li className='i'>
-                        <img src={page1.i1}  alt='Dpto Ingeniería Electrónica, supercard' />
+                        <img src={page1.i1} alt='Dpto Ingeniería Electrónica, supercard' />
                         <div>
                             <h1>
                                 DEPARTAMENTO DE INGENIERÍA ELECTRÓNICA FRT - UTN
@@ -144,24 +164,24 @@ export default () => {
                     </a>
                 </h4>
                 <form className='classic--1'>
-                <ul>
-                    <li>
-                        <span>Nombre *</span>
-                        <input/>
-                    </li>
-                    <li>
-                        <span>Email *</span>
-                        <input type='email' />
-                    </li>
-                    <li>
-                        <span>Asunto</span>
-                        <input/>
-                    </li>
-                    <li>
-                        <span>Mensaje *</span>
-                        <input type='text'/>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <span>Nombre *</span>
+                            <input />
+                        </li>
+                        <li>
+                            <span>Email *</span>
+                            <input type='email' />
+                        </li>
+                        <li>
+                            <span>Asunto</span>
+                            <input />
+                        </li>
+                        <li>
+                            <span>Mensaje *</span>
+                            <input type='text' />
+                        </li>
+                    </ul>
                 </form>
             </section>
         </>

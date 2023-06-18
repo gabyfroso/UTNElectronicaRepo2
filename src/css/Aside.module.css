@@ -78,6 +78,21 @@
     }
 }
 
+/*cel ultra pequeño*/
+@media only screen and (max-device-width: 300px){
+    #Alternativo{
+        min-height: 18em;
+    }
+    #Alternativo>nav{
+        height: 18em;
+    }
+    #Alternativo>nav>ul{
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
 /*
 ACCESIBILIDAD
 */
@@ -178,4 +193,16 @@ fieldset.fset ul>li{
 /*pc*/
 @media only screen and (min-width: 667px){
     
+}
+
+@media only screen and (max-device-width: 300px){
+    #Accesibility>svg{
+        position: absolute;
+        width: 8vh;
+        height: 8vh;
+        z-index: 9;
+    }
+    fieldset.fset{
+        margin-left: 7vh;
+    }
 }

@@ -1,0 +1,103 @@
+aside button{
+    font-size: .9em;
+}
+aside>fieldset>legend{
+    font-size: 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    filter: drop-shadow(1px 6px 4px #07034080);
+}
+
+
+/*
+MODO PARA DISCAPACIDAD VISUAL
+*/
+aside ul:last-child>li{
+    font-family: 'Open-Dyslexic', 'Atkinson Hyperlegible' , sans-serif;
+}
+div#SiteCont[dx='true'] *{
+    font-family: 'Open-Dyslexic', 'Atkinson Hyperlegible' , sans-serif !important;
+}
+
+/*pc*/
+@media only screen and (min-width: 667px){
+    ul.redir button{
+        font-size: 1.5em;
+    }
+    ul.redir button:hover{
+        font-size: 1.64em;
+    }
+}
+
+/*
+ForSizeSet
+*/
+
+div#SiteCont main *{
+margin: .1em;
+padding-top: .2em;
+padding-bottom: .4em;
+}
+
+/*div#SiteCont[sz='1']*/
+div#SiteCont[sz='1'] main h1{
+    font-size: 1.4rem;
+}
+div#SiteCont[sz='1'] main h2{
+    font-size: 1.2rem;
+}
+div#SiteCont[sz='1'] main h3{
+    font-size: 1rem;
+}
+div#SiteCont[sz='1'] main{
+    font-size: .8rem;
+}
+
+/*div#SiteCont[sz='2'] + .2*/
+div#SiteCont[sz='2'] main h1{
+    font-size: 1.6rem;
+}
+div#SiteCont[sz='2'] main h2{
+    font-size: 1.4rem;
+}
+div#SiteCont[sz='2'] main h3{
+    font-size: 1.2rem;
+}
+div#SiteCont[sz='2'] main{
+    font-size: 1rem;
+}
+
+/*div#SiteCont[sz='3'] + .2*/
+div#SiteCont[sz='3'] main h1{
+    font-size: 1.8rem;
+}
+div#SiteCont[sz='3'] main h2{
+    font-size: 1.6rem;
+}
+div#SiteCont[sz='3'] main h3{
+    font-size: 1.4rem;
+}
+div#SiteCont[sz='3'] main{
+    font-size: 1.2rem;
+}
+
+/*div#SiteCont[sz='4'] + .2*/
+div#SiteCont[sz='4'] main h1{
+    font-size: 2rem;
+}
+div#SiteCont[sz='4'] main h2{
+    font-size: 1.8rem;
+}
+div#SiteCont[sz='4'] main h3{
+    font-size: 1.6rem;
+}
+div#SiteCont[sz='4'] main{
+    font-size: 1.4rem;
+}
+
+/*
+    DIFFERENCES
+*/
+h1, h2, h3, p{
+    margin-top: .2vh;
+    margin-bottom: .4vh;
+}

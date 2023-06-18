@@ -9,13 +9,14 @@ import Inicio from './pages/Inicio.jsx';
 
 import './css/gral.css';
 
-/*
-Tools
-*/
+/*  Tools  */
+
 import './css/tool/classpages.css'
 
+/* Util */
 import './css/util/Animation.css';
 import './css/util/Colors.css';
+import './css/util/Size.css';
 
 const ElementGral= ({Eunico})=>{
   return(

@@ -148,40 +148,62 @@ ul.cards{
     height: auto;
     justify-content: center;
 }
-ul.cards *{
-    padding: .1em;
-}
 
 ul.cards>li{
-    width: 45%;
-    max-width: 95%;
     border-radius: .4em;
     padding: 0;
-    min-width: 550px;
+    width: 25em;
+    max-width: 30em;
+    flex-grow: 1;
 }
 
 ul.cards>li>button{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
+
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+
+    object-position: center;
+
     cursor: pointer;
 }
 
 ul.cards>li>button>img{
-    height: 36vh;
+    width: 30%;
+    flex-grow: 1;
 }
-
+ul.cards>li>button>div{
+    display: flex;
+    
+    flex-grow: 3;
+}
 /*pc-chica*/
-@media only screen and (max-width: 1254px){
+@media only screen and (max-width: 850px){
     ul.cards{
-        flex-wrap: nowrap;
-        flex-direction: column;
+        flex-direction: row;
     }
     ul.cards>li{
-        width: 100%;
+        min-width: 100%;
+        background-color: black;
     }
 }
 
+/*celular*/
+@media only screen and (max-device-width: 670px){
+    ul.cards{
+        width: 100%;
+    }
+    ul.cards>li>button{
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+    }
+}
+
+/*Scards*/
 ul.Scard{
     display: flex;
     flex-direction: row;
