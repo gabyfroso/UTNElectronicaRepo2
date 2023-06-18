@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./error-page";
 
 import { Cabecera, Footer } from './important-gral/implement.jsx';
 
 import App from './App.js';
-import Inicio from './pages/Inicio.jsx';
 
 import './css/gral.css';
 
@@ -17,6 +17,27 @@ import './css/tool/classpages.css'
 import './css/util/Animation.css';
 import './css/util/Colors.css';
 import './css/util/Size.css';
+
+/*
+PAGES
+*/
+import Inicio from './pages/Inicio.jsx';
+import Menu from './pages/menu';
+import Directivos from './pages/Directivos';
+
+import OfertasAcademicas from './pages/Ofertas-Academicas';
+import Media from './pages/Media/Media';
+
+import Contacto from './pages/Contacto';
+import Reportes from './pages/Contacto-reportes';
+
+//TO MENU
+import {Biblioteca, EeBooks_Extras, EeBooks_Principales, GuideStudy_eFRT} from './pages/libs/Biblioteca';
+import {PracticeProfessionalSuperviced, JornadasAcadem} from './pages/libs/Academico';
+import {SubForoConsultas} from './pages/libs/Consultas';
+import {ProyectIyD, ProyectFinals} from './pages/libs/proyectos';
+import {PrivatedLibrery} from './pages/libs/Privated';
+
 
 const ElementGral= ({Eunico})=>{
   return(
@@ -32,18 +53,7 @@ const ElementGral= ({Eunico})=>{
   )
 }
 
-const route = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />
-  },
-  {
-    path: '/inicio',
-    element:<ElementGral Eunico={Inicio}/>
-  }
-])
 
-/*
 const route = createBrowserRouter([
   {
     path: '/',
@@ -116,7 +126,6 @@ const route = createBrowserRouter([
     element:<ElementGral Eunico={GuideStudy_eFRT} />
   }
 ])
-*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

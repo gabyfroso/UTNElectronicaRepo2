@@ -1,0 +1,23 @@
+Todos tienen la sig estructura
+
+<div id='SiteCont'>
+    <Cabecera/>
+        <main>
+        |
+        |Toda la página
+        |
+        </main>
+    <Footer/>
+</div>
+
+Del cual puedes usar también las funciones del Extra para rellenar y ver como queda
+
+puedes usar:
+- SoloText
+rellena unas 3 líneas de palabras
+
+- Lorem
+rellena multiples líneas con títulos
+
+- AllLorem
+rellena multiples líneas con imágenes, títulos y textos
