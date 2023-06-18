@@ -108,7 +108,6 @@ Cabecera - Links
     padding-right: 1em;
 }
 .links>ul>li>button:hover{
-    cursor: pointer;
     letter-spacing: 0.20em;
 }
 

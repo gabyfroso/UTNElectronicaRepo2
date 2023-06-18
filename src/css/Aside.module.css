@@ -52,7 +52,6 @@
 }
 #Alternativo>nav>ul>li>button:hover{
     letter-spacing: 0.30em;
-    cursor: pointer;
 }
 #Alternativo>nav>ul>li:last-child{
     width: 100%;

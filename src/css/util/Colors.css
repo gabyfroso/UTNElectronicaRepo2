@@ -68,6 +68,12 @@ div#SiteCont[cor='Dark'] header svg{
     filter: invert();
 }
 
+div#SiteCont>header>nav>ul:last-child,
+div#SiteCont>aside>nav>ul:first-child,
+div#SiteCont:last-child>aside>fieldset{
+    box-shadow: 0 1px 3px black;
+}
+
 /*
 DARK MODE
 */

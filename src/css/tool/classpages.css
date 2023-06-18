@@ -168,8 +168,6 @@ ul.cards>li>button{
     justify-items: center;
 
     object-position: center;
-
-    cursor: pointer;
 }
 
 ul.cards>li>button>img{
