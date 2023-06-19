@@ -1,0 +1,26 @@
+.panelAdmin
+{
+    border: 1px solid red;
+    background: url('/public/loginWallpapers.jpg');
+    height: 100vh;
+}
+.containerNav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #0000003b;
+    color: #fff;
+    padding: 0 20px;
+    backdrop-filter: blur(3px);
+}
+.closeSesion{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.closeSesion:hover{
+    transform: scale(1.2);
+    transition: .4s;
+}

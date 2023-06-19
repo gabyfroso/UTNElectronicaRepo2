@@ -1,11 +1,8 @@
 import React from 'react';
 import { icons, page1 } from '../controlsimg';
-
-function Lref(ref = '') {
-    if (window.location.pathname !== ref) {
-        window.location.pathname = ref;
-    }
-}
+import { tpage1 } from "../components/cardAll";
+import MediaCard from "../components/card";
+import styles from '../components/cards.module.css'
 
 export default () => {
 
@@ -18,107 +15,19 @@ export default () => {
             <section id='Reservatorio' className='mainctr'>
                 <h1>Reservatorio Digital eFRT</h1>
                 <h3>Departamento Ingeniería Electrónica</h3>
-                <nav>
-                    <ul className='cards'>
-                        <li>
-                            <button onClick={() => Lref('/Media/Biblioteca')}>
-                                <img src={page1.i1} alt='Biblioteca de Consultas' />
-                                <div>
-                                    <h1>Biblioteca de consultas</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Biblioteca/More')}>
-                                <img src={page1.i2} alt='E-books Dpto. Electrónica FRT' />
-                                <div>
-                                    <h1>E-books Dpto. Electrónica FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Foro/Horarios')}>
-                                <img src={page1.i3} alt='Jornadas Académicas y Científicas
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Jornadas Académicas y Científicas
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Publicaciones')}>
-                                <img src={page1.i4} alt='Publicaciones Académicas y Científicas
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Publicaciones Académicas y Científicas
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Publicaciones')}>
-                                <img src={page1.i5} alt='Posgrados
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Posgrados
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Proyectos/IYD')}>
-                                <img src={page1.i6} alt='Proyectos de Investigación y Desarrollo PID
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>
-                                        Proyectos de Investigación y Desarrollo PID
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Proyectos/PPS')}>
-                                <img src={page1.i7} alt='Práctica Profesional Supervisada PPS
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Práctica Profesional Supervisada PPS
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Proyectos/FinDeCarrera')}>
-                                <img src={icons.ilutn} alt='Proyectos de Fin de Carrera
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Proyectos de Fin de Carrera
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Foro/Convenios')}>
-                                <img src={page1.i9} alt='Convenios y Transferencias al Medio
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Convenios y Transferencias al Medio
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={() => Lref('/Media/Biblioteca/StudyGuide')}>
-                                <img src={page1.i10} alt='Guías de Estudios
-                                Dpto. Electrónica - FRT' />
-                                <div>
-                                    <h1>Guías de Estudios
-                                        Dpto. Electrónica - FRT</h1>
-                                </div>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
+                <div className={styles.boxCards}>
+                    {tpage1.map((tarjeta) => {
+                        return (
+                            <MediaCard
+                                key={tarjeta.id}
+                                img={tarjeta.img}
+                                title={tarjeta.title}
+                                description={tarjeta.description}
+                                link={tarjeta.link}
+                            />
+                        );
+                    })}
+                </div>
             </section>
             <section>
                 <ul className='album--h'>

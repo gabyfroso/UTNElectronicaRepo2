@@ -60,6 +60,9 @@ import M_aForoHorarios from './pages/Media/Foro/Horarios.jsx';
 import M_aForoConvenios from './pages/Media/Foro/Convenios.jsx';
 
 
+import Login from './login';
+import Admin from './admin';
+
 const ElementGral= ({Eunico})=>{
   return(
     <>
@@ -230,6 +233,18 @@ const route = createBrowserRouter([
     path: '/Media/Foro/Convenios',
 
     element: <ElementGral Eunico={M_aForoConvenios} />
+  },
+
+  /**
+   * Important
+   */
+  {
+    path: '/login/',
+    element:<Login/>
+  },
+  {
+    path: '/admin',
+    element: <Admin/>
   }
 ])
 
