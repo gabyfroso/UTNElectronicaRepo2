@@ -4,7 +4,7 @@ export default () => {
 
     return (
         <>
-            <h1>Sección de Contacto</h1>
+            <h1>Sección de Publicaciones-Academicas</h1>
         </>
     )
 }

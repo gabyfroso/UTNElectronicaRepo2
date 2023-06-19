@@ -2,8 +2,8 @@ import React from 'react';
 import { icons, page1 } from '../controlsimg';
 
 function Lref(ref = '') {
-    if (window.location.pathname !== '/' + ref) {
-        window.location.pathname = '/' + ref;
+    if (window.location.pathname !== ref) {
+        window.location.pathname = ref;
     }
 }
 
@@ -21,7 +21,7 @@ export default () => {
                 <nav>
                     <ul className='cards'>
                         <li>
-                            <button onClick={() => Lref('/media/Biblioteca')}>
+                            <button onClick={() => Lref('/Media/Biblioteca')}>
                                 <img src={page1.i1} alt='Biblioteca de Consultas' />
                                 <div>
                                     <h1>Biblioteca de consultas</h1>
@@ -29,7 +29,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => Lref('/media/')}>
+                            <button onClick={() => Lref('/Media/Biblioteca/More')}>
                                 <img src={page1.i2} alt='E-books Dpto. Electrónica FRT' />
                                 <div>
                                     <h1>E-books Dpto. Electrónica FRT</h1>
@@ -37,7 +37,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button onClick={() => Lref('/Academico/JornadasAcadem/')}>
+                            <button onClick={() => Lref('/Media/Foro/Horarios')}>
                                 <img src={page1.i3} alt='Jornadas Académicas y Científicas
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -47,7 +47,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Publicaciones')}>
                                 <img src={page1.i4} alt='Publicaciones Académicas y Científicas
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -57,7 +57,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Publicaciones')}>
                                 <img src={page1.i5} alt='Posgrados
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -67,7 +67,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Proyectos/IYD')}>
                                 <img src={page1.i6} alt='Proyectos de Investigación y Desarrollo PID
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -78,7 +78,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Proyectos/PPS')}>
                                 <img src={page1.i7} alt='Práctica Profesional Supervisada PPS
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -88,7 +88,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Proyectos/FinDeCarrera')}>
                                 <img src={icons.ilutn} alt='Proyectos de Fin de Carrera
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -98,7 +98,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Foro/Convenios')}>
                                 <img src={page1.i9} alt='Convenios y Transferencias al Medio
                                 Dpto. Electrónica - FRT' />
                                 <div>
@@ -108,7 +108,7 @@ export default () => {
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => Lref('/Media/Biblioteca/StudyGuide')}>
                                 <img src={page1.i10} alt='Guías de Estudios
                                 Dpto. Electrónica - FRT' />
                                 <div>

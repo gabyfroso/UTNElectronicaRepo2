@@ -120,10 +120,13 @@ svg#solid{
 #Accesibility[vs='true']{
     height: 12vh;
 }
-#Accesibility[vs='false']{
+#Accesibility[vs='false'],
+#Accesibility[vs='false'] *{
     width: 0;
     height: 0;
     opacity: 0;
+
+    overflow: hidden;
 }
 
 #Accesibility>button#iconAccess{

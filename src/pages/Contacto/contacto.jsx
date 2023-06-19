@@ -1,10 +1,11 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 export default () => {
 
     return (
         <>
-            <h1>Sección de Contacto</h1>
+            <Navigate to='/Contacto/Menu'/>
         </>
     )
 }

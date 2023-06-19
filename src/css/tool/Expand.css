@@ -1,0 +1,78 @@
+/*
+
+**
+
+***** 
+
+**
+
+                Expansibles
+
+Eje:
+
+ > Biblioteca .expansible
+    -x        .tb1
+        -y    .tb2
+
+**
+
+*****
+
+**
+*/
+
+div.expansible{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: auto;
+
+    justify-items: center;
+
+}
+
+div.expansible[fc='false']>ul,
+div.expansible[fc='false']>ul *{
+    height: 0;
+    overflow: hidden;
+}
+
+div.expansible>button{
+    display: inline-flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: auto;
+    max-width: 20em;
+    height: 8vh;
+}
+div.expansible>button *{
+    display: inline-block;
+}
+div.expansible>button>svg{
+    width: 5vh;
+    height: 5vh;
+
+    transition: .6s;
+}
+
+div.expansible[fc='true']>button>svg{
+    transform: rotate(90deg);
+}
+
+
+div.tb1>ul>li{
+    padding-left: 5vh;
+}
+div.tb2>ul>li{
+    padding-left: 10vh;
+}
+div.tb3>ul>li{
+    padding-left: 15vh;
+}
+div.tb4>ul>li{
+    padding-left: 20vh;
+}

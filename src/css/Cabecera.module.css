@@ -82,7 +82,6 @@ Cabecera - Links
 .links{
     width: 100%;
     min-width: 370px;
-    min-height: 8em;
 }
 .links>ul{
     display: flex;
