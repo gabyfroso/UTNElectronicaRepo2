@@ -8,11 +8,13 @@
 {
     display: flex;
     flex-direction: row;
+
     gap: 20px;
     padding: 20px;
+    margin: 100px 0;
+
     flex-wrap: wrap;
     justify-content: center;
-    margin: 100px 0;
 }
 .card{
     width: 300px;
@@ -24,4 +26,10 @@
     object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 700px){
+    .boxCards{
+        margin: 40px 0;
+    }
 }

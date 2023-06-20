@@ -6,7 +6,7 @@
 
 **
 
-CARDS
+S_CARDS
 
 **
 
@@ -15,56 +15,6 @@ CARDS
 **
 
 */
-
-ul.cards{
-    display: flex;
-    flex-wrap: wrap;
-    
-    width: 100%;
-    height: auto;
-    justify-content: center;
-}
-
-ul.cards>li{
-    border-radius: .4em;
-    padding: 0;
-    width: 25em;
-    max-width: 30em;
-    flex-grow: 1;
-}
-
-ul.cards>li>button{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-
-    object-position: center;
-}
-
-ul.cards>li>button>img{
-    width: 30%;
-    flex-grow: 1;
-}
-ul.cards>li>button>div{
-    display: flex;
-    
-    flex-grow: 3;
-}
-/*pc-chica*/
-@media only screen and (max-width: 850px){
-    ul.cards{
-        flex-direction: row;
-    }
-    ul.cards>li{
-        min-width: 100%;
-        background-color: black;
-    }
-}
 
 /*celular*/
 @media only screen and (max-device-width: 670px){
