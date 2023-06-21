@@ -1,6 +1,5 @@
 import React from 'react';
 import { Expand, EnlaceDirecto as Edir } from '../components/Expand.jsx';
-import { pagemenu } from '../components/expandAll.js';
 
 function Menu() {
     return (
