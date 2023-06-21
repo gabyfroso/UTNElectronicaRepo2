@@ -1,5 +1,5 @@
 import React from 'react';
-import { icons, page1 } from '../controlsimg';
+import { icons, page1 } from '../img/controlsimg';
 import { tpage1 } from "../components/cardAll";
 import MediaCard from "../components/card";
 import styles from '../components/cards.module.css'

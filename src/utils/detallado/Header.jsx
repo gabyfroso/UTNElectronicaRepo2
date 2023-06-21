@@ -1,9 +1,8 @@
 import React from 'react'
 import {BiMenu} from 'react-icons/bi';
-import {icons} from '../../controlsimg';
+import {icons} from '../../img/controlsimg.js';
 
 import style from '../../css/Cabecera.module.css';
-import style_Aside from '../../css/Aside.module.css';
 
 function Lref(ref = '') {
     if (window.location.pathname !== '/' + ref) {
@@ -11,30 +10,11 @@ function Lref(ref = '') {
     }
 }
 
-export default () => {
-    const changeAside = () => {
-        const xAside = document.getElementById(style_Aside.Alternativo);
-        const xAccess = document.getElementById(style_Aside.Accesibility);
-        const xFilter = document.getElementById(style.filter);
-        const xUserMenu = document.getElementById(style.login);
-
-        xAside.getAttribute('fc') === 'true' ?
-        xAside.setAttribute('fc', false) : xAside.setAttribute('fc', true);
-        
-        xAccess.getAttribute('vs') === 'true' ?
-        xAccess.setAttribute('vs', false) : xAccess.setAttribute('vs', true);
-        
-        xFilter.getAttribute('vs') === 'true' ?
-        xFilter.setAttribute('vs', false) : xFilter.setAttribute('vs', true);
-        
-        xUserMenu.getAttribute('fc') === 'true' ?
-        xUserMenu.setAttribute('fc', false) : xUserMenu.setAttribute('fc', true);
-    }
-
+function Header ({ChangeAsideFc}) {
     return (
         <>
             <header>
-                <button onClick={() => changeAside()}>
+                <button onClick={ChangeAsideFc}>
                     <BiMenu/>
                 </button>
                 <nav className={`${style.principal}`}>
@@ -62,8 +42,8 @@ export default () => {
                     </ul>
                 </nav>
             </header>
-
-            <button id={style.filter} vs='false' onClick={() => changeAside()} />
         </>
     )
 }
+
+export default Header;

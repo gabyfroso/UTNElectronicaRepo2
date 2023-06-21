@@ -87,11 +87,3 @@ function Expand({ children = [], title = 'set title', tb = 'tb1' }) {
 export {
     Expand, EnlaceDirecto
 };
-
-/*
-
-        console.log('Children:');
-        console.log(children);
-        console.log('Link');
-        console.log(linkExpand);
-*/

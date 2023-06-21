@@ -1,0 +1,15 @@
+[
+    "Principal": [
+        {
+            "id": 0,
+            "title": "Example Title",
+            "link": "ExampleLink",
+            "img": "PathImg",
+            "alt": "Example Title Alt",
+            "visible": false
+        }
+    ],
+    "Secundarios": [
+        {}
+    ]
+]

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page";
 
-import { Cabecera, Footer } from './important-gral/implement.jsx';
+import { Cabecera, Footer } from './utils/implement.jsx';
 
 import App from './App.js';
 
@@ -11,7 +11,6 @@ import './css/gral.css';
 
 /*  Tools  */
 import './css/tool/Cards.css'
-import './css/tool/Expand.css'
 import './css/tool/classpages.css'
 
 /* Util */

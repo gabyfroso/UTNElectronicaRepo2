@@ -2,14 +2,6 @@ div#SiteCont[simple='false'] nav#UserMenu {
     transition: 1.4s all;
 }
 
-div#SiteCont[simple='false']:last-child>aside>fieldset {
-    transition: .8s all;
-}
-
-div#SiteCont[simple='false']:last-child>aside>fieldset[fc='false'] {
-    transition: .4s all;
-}
-
 div#SiteCont[simple='false'] aside,
 div#SiteCont[simple='false'] aside *,
 div#SiteCont[simple='false'] header,
@@ -17,7 +9,7 @@ div#SiteCont[simple='false'] header * {
     transition: .4s all ease-in;
 }
 
-/*cel*/
+/*Desde Dispositivo con Mouse*/
 @media only screen and (min-device-width: 667px) {
 
     div#SiteCont[simple='false']>aside li>button:hover,

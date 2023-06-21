@@ -1,0 +1,28 @@
+button#xPrincipal{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 4em;
+    height: 4em;
+
+    margin: auto;
+}
+nav#Principal{
+    position: fixed;
+    display: flex;
+
+    width: 50%;
+    height: 50%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: aqua;
+    outline: 1vh solid rgb(0, 56, 98);
+
+    z-index: 20;
+}

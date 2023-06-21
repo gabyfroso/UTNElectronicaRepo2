@@ -1,210 +1,60 @@
 #Alternativo{
     position: fixed;
-    top: 12vh;
+    display: block;
+
+    top: 10vh;
 
     width: 100%;
-    height: 26vh;
+    height: auto;
     
-}
-#Alternativo *{
+    min-height: 12em;
     
-    overflow: hidden;
-}
-#Alternativo[fc='false']{
-    height: 0;
-    opacity: 0;
-}
-#Alternativo[fc='true']{
-    height: 24vh;
-    opacity: 1;
     z-index: 10;
 }
 #Alternativo>nav{
-    top: 0;
-    box-sizing: content-box;
-    text-align: center;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
 }
-#Alternativo>nav>ul{
+.linksA{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     width: 100%;
-    height: 10em;
+    height: 100%;
 
-    box-sizing: content-box;
-    align-items: center;
     text-align: center;
+    align-items: center;
 }
-#Alternativo>nav>ul>li{
+.linksA>li{
+    min-width: 20vh;
+    height: 4em;
     flex-grow: 1;
 }
-#Alternativo>nav>ul>li>button{
-    padding: 1.2em;
-    padding-left: 3em;
-    padding-right: 3em;
 
-    min-width: 6em;
-
-    box-sizing: content-box;
-    
-    letter-spacing: 0.04em;
-}
-#Alternativo>nav>ul>li>button:hover{
-    letter-spacing: 0.30em;
-}
-#Alternativo>nav>ul>li:last-child{
+.linksA>li:last-child{
     width: 100%;
 }
-#Alternativo>nav>ul>li:last-child>button{
-    padding: 2vh;
-    padding-left: 5em;
-    padding-right: 5em;
+.linksA>li:last-child>button{
+    width: 30em;
+}
+.linksA>li>button{
+    width: 100%;
+    height: 100%;
 }
 
 /*Pc chica o cel*/
-@media only screen and (max-width: 850px){
+@media only screen and (max-device-width: 850px){
     #Alternativo{
-        padding-top: .4em;
-        height: 10.4em;
+        min-height: 16em;
     }
-    #Alternativo>nav{
-        padding-bottom: .1em;
-    }
-    #Alternativo>nav>ul{
-        height: auto;
-        min-height: 10em;
-    }
-}
-
-/*cel ultra pequeño*/
-@media only screen and (max-device-width: 300px){
-    #Alternativo{
-        min-height: 18em;
-    }
-    #Alternativo>nav{
-        height: 18em;
-    }
-    #Alternativo>nav>ul{
-        height: 100%;
+    .linksA{
         flex-direction: column;
         flex-wrap: nowrap;
     }
-}
-
-/*
-ACCESIBILIDAD
-*/
-
-svg#nosolid{
-    opacity: 1;
-}
-svg#solid{
-    opacity: 0;
-    width: 6vh;
-    height: 6vh;
-}
-
-#Accesibility{
-    position: fixed;
-    width: 100%;
-    height: 12vh;
-    
-    bottom: 1.2vh;
-    
-    margin-right: 2vh;
-    z-index: 4;
-    background-color: transparent !important;
-}
-
-#Accesibility[vs='true']{
-    height: 12vh;
-}
-#Accesibility[vs='false'],
-#Accesibility[vs='false'] *{
-    width: 0;
-    height: 0;
-    opacity: 0;
-
-    overflow: hidden;
-}
-
-#Accesibility>button#iconAccess{
-    position: absolute;
-    width: 10vh;
-    height: 10vh;
-
-    opacity: .1;
-    border-radius: 50%;
-
-    z-index: 10;
-}
-
-#Accesibility>svg{
-    position: absolute;
-    width: 10vh;
-    height: 10vh;
-    z-index: 9;
-}
-
-#Accesibility>svg[fc='true']{
-    opacity: 100%;
-}
-#Accesibility>svg[fc='false']{
-    opacity: 0%;
-}
-
-fieldset.fset{
-    position: absolute;
-    display: block;
-
-    padding: .4vh;
-    
-    height: auto;
-    margin-left: 10vh;
-    margin-right: 1vh;
-    bottom: 0;
-}
-fieldset.fset[fc='true']{
-    margin-top: -32vh;
-    opacity: 100%;
-}
-fieldset.fset[fc='false']{
-    opacity: 0%;
-}
-
-fieldset.fset>legend{
-    top: 1.4vh;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-fieldset.fset ul{
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-fieldset.fset ul>li{
-    min-width: 40vh;
-    padding: 1vh;
-    flex-grow: 1;
-}
-
-/*pc*/
-@media only screen and (min-width: 667px){
-    
-}
-
-@media only screen and (max-device-width: 300px){
-    #Accesibility>svg{
-        position: absolute;
-        width: 8vh;
-        height: 8vh;
-        z-index: 9;
-    }
-    fieldset.fset{
-        margin-left: 7vh;
+    .linksA>li{
+        width: 100%;
+        min-height: 3.2em;
     }
 }
