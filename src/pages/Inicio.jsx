@@ -1,10 +1,10 @@
 import React from 'react';
 import { icons, page1 } from '../img/controlsimg';
-import { tpage1 } from "../components/cardAll";
+import tpage1 from "../components/cardAll";
 import MediaCard from "../components/card";
 import styles from '../components/cards.module.css'
 
-export default () => {
+export default () => {   
 
     return (
         <>
@@ -16,7 +16,7 @@ export default () => {
                 <h1>Reservatorio Digital eFRT</h1>
                 <h3>Departamento Ingeniería Electrónica</h3>
                 <div className={styles.boxCards}>
-                    {tpage1.map((tarjeta) => {
+                    {tpage1.Pages.inicio.map((tarjeta) => {
                         return (
                             <MediaCard
                                 key={tarjeta.id}

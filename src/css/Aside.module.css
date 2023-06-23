@@ -42,6 +42,9 @@
 .linksA>li>button{
     width: 100%;
     height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 1em;
 }
 
 /*Pc chica o cel*/

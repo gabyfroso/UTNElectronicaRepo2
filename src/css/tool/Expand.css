@@ -25,6 +25,10 @@ div.SuperE{
     flex-direction: column;
 }
 
+div.expansible button:hover{
+    background-color: rgba(0, 0, 0, 0.129);
+}
+
 div.expansible{
     display: inline-flex;
     flex-direction: column;
