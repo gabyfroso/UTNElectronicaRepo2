@@ -12,6 +12,14 @@ div#SiteCont[simple='false'] header * {
 /*Desde Dispositivo con Mouse*/
 @media only screen and (min-device-width: 667px) {
 
+    div#SiteCont[simple='false']>header>button:hover,
+    div#SiteCont[simple='false']>header>nav>button:hover {
+        animation: anim2;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
     div#SiteCont[simple='false']>aside li>button:hover,
     div#SiteCont[simple='false']>header li>button:hover {
         text-shadow: 1px 0 5px;
@@ -57,5 +65,48 @@ div#SiteCont[simple='false'] header * {
     div#SiteCont[simple='false']>header li>a:hover::after {
         width: 20px;
         left: 80%;
+    }
+
+    div#SiteCont[simple='false']>footer>div:first-child>a:hover>img {
+        animation: anim;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes anim2 {
+        0% {
+            filter: drop-shadow(0 0 1px #818181);
+        }
+
+        30% {
+            filter: drop-shadow(0 0 -1px #595959);
+        }
+
+        60% {
+            filter: drop-shadow(0 0 1px #2c2c2c);
+        }
+
+        90% {
+            filter: drop-shadow(0 0 1px #5252523c);
+        }
+    }
+
+    @keyframes anim {
+        0% {
+            filter: invert() drop-shadow(0 0 2px #a8a8a85a);
+        }
+
+        30% {
+            filter: invert() drop-shadow(0 0 -2px #252525);
+        }
+
+        60% {
+            filter: invert() drop-shadow(0 0 2px #070707);
+        }
+
+        90% {
+            filter: invert() drop-shadow(0 0 2px #2525253c);
+        }
     }
 }

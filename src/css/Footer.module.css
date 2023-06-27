@@ -1,0 +1,148 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 1em;
+
+    min-height: 16em;
+}
+
+footer>div:first-child{
+    display: flex;
+
+    width: 100%;
+    height: auto;
+}
+
+/*ini IMG*/
+footer>div:first-child>a{
+    display: flex;
+    
+    top: .2em;
+    left: 1em;
+
+    width: 20em;
+    height: 2.4em;
+}
+
+footer>div:first-child>a>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    object-fit: scale-down;
+    filter: invert();
+}
+
+/*Fin IMG*/
+
+
+/*ButtonsMapORSimple*/
+
+.allmapdec{
+    height: auto;
+    width: 60em;
+
+    margin-left: auto;
+    right: 1em;
+}
+.allmapdec>button{
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    width: 6em;
+    height: 4em;
+}
+.allmapdec>button>svg{
+    flex-grow: 1;
+    min-width: 1.5em;
+    min-height: 1.5em;
+}
+
+button#dec{
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    margin: auto;
+
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    
+    background-color: rgba(0, 0, 0, .2);
+}
+button#dec>button{
+    position: absolute;
+    width: 2.8em;
+    height: 2em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.138);
+
+    filter: blur(1px);
+}
+
+button#dec>button[vs='true']{
+    right: 0;
+}
+button#dec>button[vs='false']{
+    left: 0;
+}
+
+/*fin*/
+
+
+/*MAP*/
+.midfooter{
+    padding-top: .5em;
+    width: 100%;
+    height: auto;
+    min-height: 4em;
+}
+nav#UTNmap{
+    width: 100%;
+    height: 30vh;
+}
+
+nav#UTNmap>iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*NoMap*/
+footer>div:nth-last-child(2)>ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    
+    left: .4em;
+
+    text-align: center;
+}
+
+footer>div:nth-last-child(2)>ul a{
+    color: #000;
+}
+
+/*
+Copyright
+*/
+
+footer>div:last-child{
+    width: 100%;
+
+    padding-top: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: .4em;
+    margin-top: auto;
+}

@@ -4,12 +4,22 @@ import tpage1 from "../components/cardAll";
 import MediaCard from "../components/card";
 import styles from '../components/cards.module.css'
 
-export default () => {   
+function inicio (){
+    let contEnter = 0;
+    const textAreaAdjust = (elem) => {
+        if (elem.code === "Enter") {
+            contEnter++;
+        }
+
+        if (contEnter > 2 && contEnter < 5) {
+            elem.target.style.height = "7em";
+        }
+    }
 
     return (
         <>
             <div className='fximg l1'>
-                <img src={icons.ilutn} className='title' />
+                <img src={icons.ilutn} alt='logoUTN' className='title' />
             </div>
 
             <section id='Reservatorio' className='mainctr'>
@@ -72,23 +82,46 @@ export default () => {
                         dptoelectronica.frt@gmail.com
                     </a>
                 </h4>
-                <form className='classic--1'>
+                <form className='f class1'>
                     <ul>
                         <li>
-                            <span>Nombre *</span>
-                            <input />
+                            <div>
+                                <label htmlFor='name'>Name</label>
+
+                                <abbr title='Tu nombre o el de tu organización. Campo obligatorio'>
+                                    *
+                                </abbr>
+                            </div>
+                            <input id='name' autoComplete='organization' />
                         </li>
                         <li>
-                            <span>Email *</span>
-                            <input type='email' />
+                            <div>
+                                <label htmlFor='email'>Email</label>
+                                <abbr title='email de contacto. Campo obligatorio'>
+                                    *
+                                </abbr>
+                            </div>
+                            <input id='email' type='email' autoComplete='email' />
                         </li>
                         <li>
-                            <span>Asunto</span>
-                            <input />
+                            <div>
+                                <abbr title='resumen titular del tema. Campo obligatorio'>
+                                    <label htmlFor='asunto'>Asunto</label>
+                                </abbr>
+                            </div>
+                            <input id='asunto' />
                         </li>
                         <li>
-                            <span>Mensaje *</span>
-                            <input type='text' />
+                            <div>
+                                <abbr title='puedes detallar todo lo que gustes, esperamos tu respuesta!'>
+                                    <label htmlFor='msg'>Mensaje</label>
+                                    *
+                                </abbr>
+                            </div>
+                            <textarea id='msg' onKeyUp={(elem) => textAreaAdjust(elem)} />
+                        </li>
+                        <li>
+                            <input type='submit' value='enviar' id='send'/>
                         </li>
                     </ul>
                 </form>
@@ -96,3 +129,5 @@ export default () => {
         </>
     )
 }
+
+export default inicio;

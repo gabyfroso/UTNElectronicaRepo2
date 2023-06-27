@@ -1,4 +1,5 @@
 import ilcomplete from './icons/logo-utn.png';
+import ilcomplete2 from './icons/logo-utn2.png';
 import ilutn from './icons/utn-2.svg';
 
 import i1 from './pages/i1.webp';
@@ -13,6 +14,7 @@ import i10 from './pages/i10.webp';
 
 const icons = {
     ilcomplete : ilcomplete,
+    ilcomplete2 : ilcomplete2,
     ilutn: ilutn
 }
 

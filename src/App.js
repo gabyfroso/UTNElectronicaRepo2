@@ -1,8 +1,25 @@
+import React, {useState, useEffect} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 
 const cookie = new Cookies();
 function App() {
+  const [tomenu, setTomenu] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTomenu(true);
+    }, 200);
+
+    setTimeout(() => {
+      setTomenu(false);
+    }, 800);
+  
+    return () => {
+      
+    }
+  }, [])
+  
   
   return (
     <div className="App">
@@ -13,7 +30,10 @@ function App() {
       <h3>Discapacidad lectora: {cookie.get('Dislexia')}</h3>
 
       <br/>
-      <Navigate to='/inicio'/>
+      {
+        tomenu && <Navigate to='/inicio'/>
+      }
+      
       <Link to={'/inicio'}>1 ¡REDIRECCIONAME! 1</Link>
     </div>
   );

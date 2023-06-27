@@ -1,4 +1,4 @@
-section.c{
+section.c {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -24,7 +24,7 @@ Formularios
 **
 
 */
-form.f{
+form.f {
     display: flex;
     flex-direction: column;
 
@@ -33,16 +33,126 @@ form.f{
     align-items: center;
     text-align: center;
 }
-form.classic--1 *{
-    width: 100%;
-}
-form.classic--1 input{
-    background-color: transparent;
+
+form.f abbr {
     border: none;
-    border-bottom: 2px solid blue;
-    width: 70em;
+    text-decoration: none;
 }
 
+form.f #send{
+    width: 8em;
+    height: 2.8em;
+    margin: auto;
+    outline: auto;
+    border: none;
+    font-size: 1rem;
+}
+form.f #send:hover{
+    cursor: pointer;
+}
+
+/*
+Class1
+*/
+
+form.class1 li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+form.class1 textarea {
+    height: 3em;
+}
+
+form.class1 input,
+form.class1 textarea {
+    width: 70em;
+
+    margin: 1em;
+
+    border: none;
+    border-bottom: 2px solid blue;
+
+    resize: none;
+
+    background-color: transparent;
+}
+
+form.class1 input:focus,
+form.class1 textarea:focus {
+    outline: none;
+    padding: 1em;
+}
+
+form.class1 textarea:focus {
+    height: 4em;
+    overflow: auto;
+}
+
+/*
+class2
+*/
+form.class2,
+form.class2>ul {
+    width: 120vh;
+}
+
+form.class2 ul>li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+form.class2 ul>li>div {
+    min-width: 12vh;
+}
+
+form.class2 textarea,
+form.class2 input {
+    width: 100%;
+}
+
+form.class2 textarea {
+    resize: none;
+    flex-grow: 1;
+}
+
+form.class2 textarea:focus,
+form.class2 input:focus{
+    padding-left: .4em;
+}
+
+/*cel*/
+@media only screen and (max-width: 667px) {
+    form.class2{
+        margin-right: 2vh;
+        margin-left: 2vh;
+    }
+    form.class2 ul>li {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    form.class2 textarea,
+    form.class2 input {
+       width: 96%;
+       min-width: 96%;
+    }
+}
+
+/*Desde Dispositivo con Mouse- Elementos relacionados con el main*/
+@media only screen and (min-device-width: 667px){
+    form.f input[type='submit'], form.f button{
+        background-color: #07070710;
+    }
+    form.f input:hover[type='submit'], form.f button:hover{
+        background-color: #0707071b;
+        letter-spacing: 0.1em;
+    }
+}
 
 /*
 
@@ -62,7 +172,7 @@ XCONTROL DE IMAGENES
 
 */
 
-.util{
+.util {
     position: absolute;
 
     width: 8vh;
@@ -70,42 +180,49 @@ XCONTROL DE IMAGENES
     z-index: 3;
 }
 
-button.util{
+button.util {
     border-radius: 30%;
     border-bottom: 2px solid black;
 
     opacity: .2;
     z-index: 4;
 }
-div.fximg>img{
+
+div.fximg>img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-img.co{
+
+img.co {
     object-fit: cover;
 }
-img.fi{
-    object-fit:fill;
-}
-img.sd{
-    object-fit:scale-down;
+
+img.fi {
+    object-fit: fill;
 }
 
-div.fximg{
+img.sd {
+    object-fit: scale-down;
+}
+
+div.fximg {
     display: flex;
 }
 
-div.l1{
+div.l1 {
     height: 14em;
 }
-div.l2{
+
+div.l2 {
     height: 12em;
 }
-div.l3{
+
+div.l3 {
     height: 10em;
 }
-div.l4{
+
+div.l4 {
     height: 8em;
 }

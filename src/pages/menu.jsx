@@ -4,7 +4,6 @@ import { Expand, EnlaceDirecto as Edir } from '../components/Expand.jsx';
 function Menu() {
     return (
         <>
-            <h1>Sección de Menu</h1>
             <div className='SuperE'>
                 <Expand title='Media' tb='tb1'>
 

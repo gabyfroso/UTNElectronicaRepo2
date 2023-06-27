@@ -10,46 +10,37 @@ const cookie = new Cookies();
 
 const CuadranteAnuncioP = () => {
     const [mostrar, setmostrar] = useState(true);
-    const [timeOuts, settimeOuts] = useState(cookie.get('TimeOuts'))
+    const [timeOuts, settimeOuts] = useState(cookie.get('TimeOuts'));
 
-    const dateA = new Date();
-    const fechaMas8h = new Date(dateA.getFullYear(), 
-    dateA.getMonth(), dateA.getDate(), dateA.getHours()+8);
+    const nD = new Date();
+    const fechaMas8h = new Date(nD.getFullYear(), nD.getMonth(), nD.getDate(), nD.getHours()+8);
 
     const ChangeMostrar = ()=>{
-        setmostrar(false);
         cookie.set('TimeOuts', `${timeOuts}-P`, fechaMas8h);
 
+        setmostrar(false);
     }    
     useEffect(() => { 
-
         if (timeOuts === undefined) {
             cookie.set('TimeOuts', ``, fechaMas8h);
             settimeOuts('');
-        }
-
+        };
+        
         //Para que no sea un spam, se pone un timeout de 8h
         String(timeOuts).split('-').forEach(Outs=>{
             if (Outs === 'P') {
                 setmostrar(false);
             }
-        })
-        
-        
-        
+        });
 
     }, [mostrar])
 
     const SegmentAnuncio = (
         <>
             <nav id={style.Principal}>
-                <button id={style.xPrincipal} 
-                onClick={() => setmostrar(false)}>
+                <button id={style.xPrincipal} onClick={ChangeMostrar}>
                     <GrClose/>
                 </button>
-
-
-
             </nav>
             {Filter(ChangeMostrar)}
         </>
