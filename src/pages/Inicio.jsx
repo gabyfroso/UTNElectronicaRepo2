@@ -22,7 +22,7 @@ function inicio (){
                 <img src={icons.ilutn} alt='logoUTN' className='title' />
             </div>
 
-            <section id='Reservatorio' className='mainctr'>
+            <section id='Reservatorio' className='mainctr c'>
                 <h1>Reservatorio Digital eFRT</h1>
                 <h3>Departamento Ingeniería Electrónica</h3>
                 <div className={styles.boxCards}>

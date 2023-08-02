@@ -11,7 +11,7 @@ div#SiteCont[simple='false'] header * {
 
 /*Desde Dispositivo con Mouse*/
 @media only screen and (min-device-width: 667px) {
-
+    
     div#SiteCont[simple='false']>header>button:hover,
     div#SiteCont[simple='false']>header>nav>button:hover {
         animation: anim2;
@@ -73,6 +73,21 @@ div#SiteCont[simple='false'] header * {
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
     }
+
+    
+@media only screen and (max-width: 600px){
+    div#SiteCont[simple='false']>aside li>button::before,
+    div#SiteCont[simple='false']>header li>button::before,
+    div#SiteCont[simple='false']>header li>a::before {
+        height: 4.2px;
+    }
+
+    div#SiteCont[simple='false']>aside li>button::after,
+    div#SiteCont[simple='false']>header li>button::after,
+    div#SiteCont[simple='false']>header li>a::after {
+        height: 4.2px;
+    }
+}
 
     @keyframes anim2 {
         0% {

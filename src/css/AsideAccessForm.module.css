@@ -132,3 +132,22 @@ aside#Ac {
         height: 4.2em;
     }
 }
+
+@media only screen and (max-width: 667px){
+    button.xAc {
+        bottom: 3.5em;
+
+        width: 1em;
+        height: 1em;
+    }
+
+    aside#Ac {
+        width: 3.4em;
+        height: 3.4em;
+    }
+
+    .Segul>li{
+        padding-top: .1em;
+        padding-bottom: .1em;
+    }
+}
